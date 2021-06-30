@@ -1,9 +1,7 @@
 <template>
   <Header class="header" />
   <div class="main">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <TodoList />
-    <!--<router-view /> -->
+    <router-view />
   </div>
 </template>
 
@@ -49,10 +47,20 @@ export default {
 /** ------------------------------------- */
 .header {
   height: 5vh;
-  background-color: darkgrey;
+  // background-color: darkgrey;
+  color: #fff;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#fa709a),
+    to(#fee140)
+  );
+  background-image: -webkit-linear-gradient(left, #fa709a 0%, #fee140 100%);
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
 }
 .main {
   flex: 1;
-  background-color: lightsalmon;
+  background-color: rgb(245, 235, 231);
 }
 </style>

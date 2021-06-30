@@ -1,5 +1,8 @@
 <template>
-  <div class="time">{{ this.currentTime }}</div>
+  <div class="header-content">
+    <div class="back-top" @click="gotoTop()">Top画面</div>
+    <div class="time">{{ this.currentTime }}</div>
+  </div>
 </template>
 <script>
 import util from "@/utils/util.js";
@@ -42,8 +45,31 @@ export default {
       }
       return (zero + num).slice(-len);
     },
+    gotoTop() {
+      console.log("Topページに遷移");
+      this.$router.push("/");
+    },
   },
 };
 </script>
 <style>
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.back-top {
+  font-weight: bold;
+  font-size: large;
+  position: absolute;
+  left: 0px;
+  margin-left: 8px;
+  /* background-color: rgb(218, 218, 226); */
+  /* border: 2px solid #b84c00; */
+}
+.time {
+  font-weight: bold;
+  font-size: large;
+}
 </style>
